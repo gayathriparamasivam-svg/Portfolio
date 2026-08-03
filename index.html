@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gayathri P — Full Stack Developer</title>
+<meta name="description" content="Portfolio of Gayathri P, a Full Stack Developer skilled in React, Node.js and Python, with experience building an e-learning platform and an AI-based Indian Sign Language communication system.">
+
+<!-- Google Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (labels/data) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome (free icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ SKIP LINK (ACCESSIBILITY) ============ -->
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============ SIGNAL BAR (decorative, aria-hidden) ============ -->
+<div class="signal-bar" aria-hidden="true"><span></span></div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav-wrap">
+  <nav class="nav" aria-label="Primary">
+    <a href="#home" class="nav-mark" aria-label="Gayathri P, home">
+      <span class="nav-mark__wave" aria-hidden="true">
+        <svg viewBox="0 0 40 24" width="28" height="18"><polyline points="0,12 6,12 9,4 13,20 17,2 21,22 25,8 29,12 40,12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span>Gayathri&nbsp;P</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#contact" class="nav-link nav-link--cta">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__waveform" aria-hidden="true">
+      <svg viewBox="0 0 1200 200" preserveAspectRatio="none">
+        <polyline id="heroWave" points="0,100 60,100 90,40 130,170 170,20 210,180 250,60 290,100 340,100 380,50 420,150 460,30 500,170 540,100 590,100 630,45 670,160 710,25 750,175 790,90 830,100 1200,100"
+          fill="none" stroke="url(#waveGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+          <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#5B8DEF"/>
+            <stop offset="100%" stop-color="#9B6FF0"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="hero__inner reveal">
+      <p class="eyebrow">Full Stack Developer</p>
+      <h1 class="hero__name">Gayathri P</h1>
+      <p class="hero__intro">
+        I build responsive, production-grade web applications with React and Node.js —
+        and I like to spend my off-hours teaching machines to understand people, like the
+        Indian Sign Language system I built to translate between speech and signs. CGPA
+        8.69 in B.E. Computer Science and Engineering (Honours), Anna University.
+      </p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--ghost">Contact Me</a>
+      </div>
+      <div class="hero__links">
+        <a href="[Add GitHub URL]" class="icon-link" aria-label="GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>
+        <a href="[Add LinkedIn URL]" class="icon-link" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+        <a href="mailto:gayathriparamasivam55@gmail.com" class="icon-link" aria-label="Send email"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span></a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="section__head reveal">
+      <p class="eyebrow">About</p>
+      <h2>A developer who reads both syntax and signals</h2>
+    </div>
+
+    <div class="about__grid">
+      <p class="about__text reveal">
+        I'm a Full Stack Developer based in Sivakasi, Tamil Nadu, with hands-on experience
+        building and maintaining a production e-learning platform using React, Node.js, and
+        RESTful APIs. I have a strong foundation in responsive front-end development and
+        backend integration, and I round that out with an academic AI project applying deep
+        learning and computer vision to real-time accessibility technology &mdash; a two-way
+        communication system for deaf and hearing individuals. I hold a CGPA of 8.69 in B.E.
+        Computer Science and Engineering (Honours), and I'm currently looking to bring a
+        versatile, detail-oriented engineering skill set to a growing product team.
+      </p>
+
+      <dl class="about__facts reveal">
+        <div class="fact">
+          <dt>Location</dt>
+          <dd>Sivakasi, Virudhunagar, Tamil Nadu</dd>
+        </div>
+        <div class="fact">
+          <dt>Focus</dt>
+          <dd>React &middot; Node.js &middot; Python</dd>
+        </div>
+        <div class="fact">
+          <dt>Languages spoken</dt>
+          <dd>Tamil, English</dd>
+        </div>
+        <div class="fact">
+          <dt>Status</dt>
+          <dd>Open to new opportunities</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section section--alt" id="education">
+    <div class="section__head reveal">
+      <p class="eyebrow">Education</p>
+      <h2>Academic record</h2>
+    </div>
+
+    <ol class="edu-list">
+      <li class="edu-item reveal">
+        <div class="edu-item__meta">
+          <span class="edu-item__years">2021 &ndash; 2025</span>
+        </div>
+        <div class="edu-item__body">
+          <h3>Anna University</h3>
+          <p>B.E. Computer Science and Engineering (Honours)</p>
+          <span class="tag">CGPA 8.69</span>
+        </div>
+      </li>
+
+      <li class="edu-item reveal">
+        <div class="edu-item__meta">
+          <span class="edu-item__years">2020 &ndash; 2021</span>
+        </div>
+        <div class="edu-item__body">
+          <h3>Higher Secondary Education</h3>
+          <span class="tag">90%</span>
+        </div>
+      </li>
+
+      <li class="edu-item reveal">
+        <div class="edu-item__meta">
+          <span class="edu-item__years">2018 &ndash; 2019</span>
+        </div>
+        <div class="edu-item__body">
+          <h3>SSLC</h3>
+          <span class="tag">87%</span>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="section__head reveal">
+      <p class="eyebrow">Technical Skills</p>
+      <h2>What I build with</h2>
+    </div>
+
+    <div class="skills__grid">
+      <div class="skill-card reveal">
+        <h3><i class="fa-solid fa-code" aria-hidden="true"></i> Programming Languages</h3>
+        <div class="badges">
+          <span class="badge">JavaScript</span>
+          <span class="badge">Python</span>
+          <span class="badge">HTML5</span>
+          <span class="badge">CSS3</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Frameworks &amp; Libraries</h3>
+        <div class="badges">
+          <span class="badge">React</span>
+          <span class="badge">Node.js</span>
+          <span class="badge">TensorFlow</span>
+          <span class="badge">OpenCV</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <h3><i class="fa-solid fa-plug" aria-hidden="true"></i> Core Competencies</h3>
+        <div class="badges">
+          <span class="badge">Responsive Web Design</span>
+          <span class="badge">REST API Integration</span>
+          <span class="badge">Backend Logic</span>
+          <span class="badge">UI/UX Design</span>
+          <span class="badge">Cross-Device Compatibility</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section section--alt" id="experience">
+    <div class="section__head reveal">
+      <p class="eyebrow">Experience</p>
+      <h2>Where I've worked</h2>
+    </div>
+
+    <div class="timeline">
+      <article class="timeline__item reveal">
+        <div class="timeline__dot" aria-hidden="true"></div>
+        <div class="timeline__card">
+          <div class="timeline__top">
+            <h3>Full Stack Developer</h3>
+            <span class="timeline__date">Jun 2025 &ndash; Apr 2026</span>
+          </div>
+          <p class="timeline__org">The Logical Monks &middot; T. Nagar, Chennai</p>
+          <p class="timeline__project">E-Learning Platform Project</p>
+          <ul class="timeline__list">
+            <li>Developed and maintained core features for a dynamic e-learning platform using React and Node.js, supporting real-time educational content delivery to end users.</li>
+            <li>Built responsive, cross-device UI components with HTML/CSS, ensuring consistent user experience across desktop and mobile.</li>
+            <li>Contributed to backend logic and REST API integration, connecting front-end features to platform services.</li>
+            <li>Collaborated with the development team to debug issues, review code, and ship features on schedule.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="section__head reveal">
+      <p class="eyebrow">Featured Projects</p>
+      <h2>Things I've built</h2>
+    </div>
+
+    <div class="projects__grid">
+      <article class="project-card reveal">
+        <div class="project-card__wave" aria-hidden="true">
+          <svg viewBox="0 0 300 60" preserveAspectRatio="none">
+            <polyline points="0,30 20,30 30,10 40,50 50,5 60,55 70,20 80,30 100,30 110,15 120,45 130,8 140,52 150,30 170,30 180,12 190,48 200,7 210,53 220,25 230,30 300,30"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Deaf Companion System</h3>
+        <p class="project-card__tag">Academic Project</p>
+        <p class="project-card__desc">
+          An AI-based two-way communication system for deaf and hearing individuals,
+          translating between Indian Sign Language and spoken/written language in real time.
+        </p>
+        <ul class="project-card__features">
+          <li>Real-time Indian Sign Language recognition using Temporal Convolutional Networks (TCN)</li>
+          <li>Speech-to-text conversion for seamless bidirectional interaction</li>
+          <li>Text-to-sign translation pipeline with an animated avatar rendering spoken/written language as sign gestures</li>
+          <li>Real-time video processing and speech integration for audio input</li>
+        </ul>
+        <div class="project-card__stack">
+          <span class="badge badge--mono">Python</span>
+          <span class="badge badge--mono">TensorFlow</span>
+          <span class="badge badge--mono">OpenCV</span>
+          <span class="badge badge--mono">TCN</span>
+        </div>
+        <div class="project-card__links">
+          <a href="[Add GitHub URL]" class="project-link"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
+          <a href="[Add live demo URL]" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-card__wave" aria-hidden="true">
+          <svg viewBox="0 0 300 60" preserveAspectRatio="none">
+            <polyline points="0,30 30,30 45,15 55,45 70,30 90,30 105,10 115,50 130,30 150,30 165,18 175,42 190,30 210,30 225,12 235,48 250,30 300,30"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>E-Learning Platform</h3>
+        <p class="project-card__tag">The Logical Monks</p>
+        <p class="project-card__desc">
+          A dynamic e-learning platform delivering real-time educational content, built and
+          maintained as part of a production development team.
+        </p>
+        <ul class="project-card__features">
+          <li>Responsive, cross-device UI components in React with consistent UX on desktop and mobile</li>
+          <li>Backend logic and REST API integration connecting front-end features to platform services</li>
+          <li>Collaborative debugging, code review, and on-schedule feature delivery</li>
+        </ul>
+        <div class="project-card__stack">
+          <span class="badge badge--mono">React</span>
+          <span class="badge badge--mono">Node.js</span>
+          <span class="badge badge--mono">HTML/CSS</span>
+          <span class="badge badge--mono">REST APIs</span>
+        </div>
+        <div class="project-card__links">
+          <a href="[Add GitHub URL]" class="project-link"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
+          <a href="[Add live demo URL]" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section class="section section--alt" id="certifications">
+    <div class="section__head reveal">
+      <p class="eyebrow">Certifications &amp; Achievements</p>
+      <h2>Credentials</h2>
+    </div>
+
+    <div class="cert__grid">
+      <div class="cert-card reveal">
+        <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+        <h3>Java Programming</h3>
+        <p>eTechnologies</p>
+        <span class="tag">August 2023</span>
+      </div>
+      <div class="cert-card reveal">
+        <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+        <h3>UI/UX Design</h3>
+        <p>Retech Solutions</p>
+        <span class="tag">August 2024</span>
+      </div>
+      <div class="cert-card reveal">
+        <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+        <h3>Java</h3>
+        <p>National Skill Development &amp; Certification Authority</p>
+        <span class="tag">January 2024</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="section__head reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's build something together</h2>
+    </div>
+
+    <div class="contact__grid">
+      <div class="contact__info reveal">
+        <a class="contact__row" href="mailto:gayathriparamasivam55@gmail.com">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <span>gayathriparamasivam55@gmail.com</span>
+        </a>
+        <a class="contact__row" href="tel:+918870322567">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>+91 88703-22567</span>
+        </a>
+        <div class="contact__row">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Sivakasi, Virudhunagar, Tamil Nadu</span>
+        </div>
+        <div class="contact__socials">
+          <a href="[Add GitHub URL]" class="icon-link" aria-label="GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          <a href="[Add LinkedIn URL]" class="icon-link" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <form class="contact__form reveal" id="contactForm" novalidate>
+        <p class="form-note">
+          This form validates your input in the browser, but sending real email needs a
+          backend or a form service (e.g. Formspree, EmailJS, or a small server endpoint) &mdash;
+          none is connected yet. Until then, please use the email or phone number listed above.
+        </p>
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+          <span class="field__error" id="nameError" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <span class="field__error" id="emailError" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+          <span class="field__error" id="subjectError" role="alert"></span>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <span class="field__error" id="messageError" role="alert"></span>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block">Send Message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <a href="#home" class="nav-mark nav-mark--footer">
+      <span class="nav-mark__wave" aria-hidden="true">
+        <svg viewBox="0 0 40 24" width="24" height="16"><polyline points="0,12 6,12 9,4 13,20 17,2 21,22 25,8 29,12 40,12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span>Gayathri&nbsp;P</span>
+    </a>
+    <p class="footer__tag">Full Stack Developer &middot; Sivakasi, Tamil Nadu</p>
+    <div class="footer__socials">
+      <a href="[Add GitHub URL]" class="icon-link" aria-label="GitHub profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+      <a href="[Add LinkedIn URL]" class="icon-link" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+      <a href="mailto:gayathriparamasivam55@gmail.com" class="icon-link" aria-label="Send email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+    </div>
+    <p class="footer__copy">&copy; <span id="year"></span> Gayathri P. Built with HTML, CSS &amp; JavaScript.</p>
+  </div>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
