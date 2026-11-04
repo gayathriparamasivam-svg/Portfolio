@@ -35,12 +35,12 @@ const PROJECTS = [
   {
     title: 'Cracker Shop Website', kind: 'Personal project',
     desc: 'Responsive shopping site with product displays, reusable components and friendly layouts, deployed on Vercel.',
-    tech: ['React.js', 'Material UI', 'JavaScript', 'CSS', 'Vercel'], live: 'https://your-cracker-shop.vercel.app',
+    tech: ['React.js', 'Material UI', 'JavaScript', 'CSS', 'Vercel'], live: ' https://cracker-shop-ten.vercel.app/',
   },
   {
     title: 'Python RAG Chatbot for PDFs', kind: 'Personal project',
     desc: 'Answers questions from a PDF using text extraction, overlapping chunking, embeddings and cosine similarity retrieval, with Gemini writing the final answer.',
-    tech: ['Python', 'Streamlit', 'Gemini API', 'NumPy', 'PyPDF', 'RAG', 'Embeddings'], live: 'https://your-app.streamlit.app',
+    tech: ['Python', 'Streamlit', 'Gemini API', 'NumPy', 'PyPDF', 'RAG', 'Embeddings'], live: 'https://python-rag-chatbot-59jlxzajrf8fhldnfekyaq.streamlit.app/',
   },
   {
     title: 'Deaf Companion System', kind: 'Academic project',
