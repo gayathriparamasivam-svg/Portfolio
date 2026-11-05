@@ -100,13 +100,16 @@ function Kolam() {
     const LRANGE = 170;  // cursor distance that reveals a skill
     const ptr = { x: -9999, y: -9999 };
     const SKILL_NAMES = Object.values(SKILLS).flat();
-    let w = 0, h = 0, raf, labels = [], marks = new Map(), narrow = false;
+    let w = 0, h = 0, raf, labels = [], marks = new Map(), narrow = false, mobile = false;
 
     const near = (x, y, r = RANGE) => Math.max(0, 1 - Math.hypot(x - ptr.x, y - ptr.y) / r);
 
     // Place skills on lattice points. Desktop: right half of the hero. Phone/tablet: reserved strip at the bottom.
     function layout() {
       narrow = window.matchMedia('(max-width: 899.95px)').matches; // same breakpoint as MUI "md"
+      mobile = window.matchMedia('(max-width: 599.95px)').matches; // same breakpoint as MUI "sm"
+      labels = []; marks = new Map();
+      if (mobile) return; // no skill reveal on phones
       const x0 = narrow ? w * 0.04 : w * 0.56, x1 = narrow ? w * 0.96 : w - 24;
       const y0 = narrow ? h - 296 : 70, y1 = narrow ? h - 16 : h - 50;
       const cellW = narrow ? 110 : 150, cellH = narrow ? 52 : 76;
@@ -193,6 +196,7 @@ function Kolam() {
       if (reduce) draw(0);
     };
     const move = (e) => {
+      if (mobile) return; // kolam ignores touch on phones
       const r = canvas.getBoundingClientRect();
       ptr.x = e.clientX - r.left; ptr.y = e.clientY - r.top;
     };
@@ -283,19 +287,19 @@ function Hero() {
           I build React and Node.js products and side projects in Python and AI. I spent 10 months at The Logical Monks
           shipping an e-learning platform, and I'm now looking for a junior full stack or React role in Chennai.
         </Typography>
-        <Stack direction="row" spacing={2} sx={{ mt: 4, flexWrap: 'wrap', rowGap: 2 }}>
-          <Button variant="contained" size="large" onClick={() => goTo('projects')}>See my work</Button>
-          <Button variant="outlined" size="large" startIcon={<DownloadIcon />} href={LINKS.resume} download>Download resume</Button>
-        </Stack>
+        <Box sx={{ mt: 4, display: 'grid', gap: 2, gridTemplateColumns: { xs: 'minmax(0, 1fr)', sm: 'repeat(2, max-content)' } }}>
+          <Button variant="contained" size="large" onClick={() => goTo('projects')} sx={{ minHeight: 48, width: '100%' }}>See my work</Button>
+          <Button variant="outlined" size="large" startIcon={<DownloadIcon />} href={LINKS.resume} download sx={{ minHeight: 48, width: '100%' }}>Download resume</Button>
+        </Box>
         <Stack direction="row" spacing={1} sx={{ mt: 3 }}>
           <IconButton aria-label="GitHub" href={LINKS.github} target="_blank" rel="noreferrer"><GitHubIcon /></IconButton>
           <IconButton aria-label="LinkedIn" href={LINKS.linkedin} target="_blank" rel="noreferrer"><LinkedInIcon /></IconButton>
           <IconButton aria-label="Email" onClick={() => goTo('contact')}><EmailIcon /></IconButton>
         </Stack>
-        <Typography variant="body2" color="text.secondary" sx={{ mt: 6 }}>
+        <Typography variant="body2" color="text.secondary" sx={{ mt: 6, display: { xs: 'none', sm: 'block' } }}>
           Move your cursor or finger over the kolam dots to reveal my skills.
         </Typography>
-        <Box aria-hidden="true" sx={{ height: { xs: 300, md: 0 } }} /> {/* room for the skills on phones and tablets */}
+        <Box aria-hidden="true" sx={{ height: { xs: 0, sm: 300, md: 0 } }} /> {/* room for the skills on tablets */}
       </Container>
     </Box>
   );
@@ -470,19 +474,19 @@ function Contact({ notify }) {
 const PALETTE = {
   light: {
     mode: 'light',
-    primary: { main: '#6A0F1F', contrastText: '#F5EBD6' },   // maroon
-    secondary: { main: '#B8863B', contrastText: '#2B0A10' }, // antique gold
-    background: { default: '#EBDCBF', paper: '#F5EBD6' },    // sandal
-    text: { primary: '#2B0A10', secondary: '#6B4A45' },
-    divider: 'rgba(106,15,31,.25)',
+    primary: { main: '#6A0F1F', contrastText: '#FFFFFF' },   // maroon
+    secondary: { main: '#A23B4E', contrastText: '#FFFFFF' }, // lighter maroon accent
+    background: { default: '#FFFFFF', paper: '#FBF4F5' },    // white
+    text: { primary: '#2B0A10', secondary: '#6E5358' },
+    divider: 'rgba(106,15,31,.2)',
   },
   dark: {
     mode: 'dark',
-    primary: { main: '#E0C79B', contrastText: '#3A0B14' },
-    secondary: { main: '#D9A441', contrastText: '#2B0A10' },
+    primary: { main: '#F2D4D9', contrastText: '#3A0B14' },
+    secondary: { main: '#E2909F', contrastText: '#2B0A10' },
     background: { default: '#24080D', paper: '#33101A' },
-    text: { primary: '#EBDCBF', secondary: '#C9B38F' },
-    divider: 'rgba(224,199,155,.25)',
+    text: { primary: '#FFF3F4', secondary: '#D8BCC1' },
+    divider: 'rgba(255,235,238,.25)',
   },
 };
 
@@ -553,7 +557,7 @@ export default function App() {
       <CssBaseline />
       <GlobalStyles styles={{ body: { overflowX: 'hidden' }, html: { scrollBehavior: 'smooth' }, '@media (prefers-reduced-motion: reduce)': { html: { scrollBehavior: 'auto' } } }} />
       <LinearProgress variant="determinate" value={progress} color="secondary" sx={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1301, height: 3, bgcolor: 'transparent' }} aria-hidden="true" />
-      <AppBar position="fixed" color="transparent" elevation={0} sx={{ backdropFilter: 'blur(12px)', bgcolor: mode === 'dark' ? 'rgba(36,8,13,.8)' : 'rgba(235,220,191,.82)', borderBottom: 1, borderColor: 'divider' }}>
+      <AppBar position="fixed" color="transparent" elevation={0} sx={{ backdropFilter: 'blur(12px)', bgcolor: mode === 'dark' ? 'rgba(36,8,13,.8)' : 'rgba(255,255,255,.85)', borderBottom: 1, borderColor: 'divider' }}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Typography component="a" href="#home" variant="h6" sx={{ color: 'text.primary', textDecoration: 'none' }}>Gayathri P</Typography>
           <Stack direction="row" spacing={0.5} alignItems="center">
